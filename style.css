@@ -4,6 +4,7 @@
 body{
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
+    margin: 0;
 }
 .title{
     font-family: 'Barlow', sans-serif;
@@ -16,7 +17,7 @@ body{
     width: 70%;
     margin: 0 auto;
     line-height: 2em;
-    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     transition: all 2s;
     height: 100%;
 }
@@ -96,4 +97,27 @@ body{
     height: 100%;
     background-color: #4f4f4f;
     height: 15px;
+}
+.heading{
+    background-color:#102495;
+    height: 70px;
+    color: white;
+    font-size: 20px;
+}
+.cont{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.count{
+    background-color: white;
+    color: #102495;
+    border-radius: 12px;
+    padding: 5px;
+    margin-left: 10px;
+    font-weight: 700;
 }

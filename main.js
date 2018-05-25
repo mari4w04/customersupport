@@ -1,18 +1,24 @@
 
 //Fetch data
-function getAllTickets(f){
+function getAllTickets(){
     fetch("https://kea-alt-del.dk/customersupport/")
     .then(res=>res.json())
     .then(showTickets);
 }
 
 function showTickets(data){
+    let ticketAmount = data.length;
+    document.querySelector(".heading .count").textContent = ticketAmount;
     data.sort(function (a, b) {
         return b.importance - a.importance;
       });
     let ticketList = document.querySelector("#tickets");
     let template = document.querySelector("#ticketTemplate").content;
+    
     data.forEach(function(ticket){
+        
+        
+        
         let clone = template.cloneNode(true);
         let title = clone.querySelector(".title");
         let priority = clone.querySelector(".priority");
@@ -75,8 +81,12 @@ function showTickets(data){
             let parent = event.target.parentElement.parentElement;
             parent.classList.add("animate-rem");
             setTimeout(function(){
-                parent.classList.add("displ-none");
-            }, 1000)
+                parent.remove();
+            }, 1000);
+            ticketAmount--;
+            console.log(ticketAmount);
+            document.querySelector(".heading .count").textContent = ticketAmount;
+            
             //event.target.parentElement.parentElement.nextSibling.nextSibling.nextSibling.classList.add("move-up");
         });
 
