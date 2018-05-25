@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="tickets">
+
+    </div>
+
+    <template id="ticketTemplate">
+        <div class="ticket-card">
+            <div class="left">
+                <div class="row">
+                    <div class="title"></div>
+                    <div class="priority"></div>
+                </div>
+                <div class="row">
+                    <div class="time"></div> <div class="vert-line"></div>
+                    <div class="requester"></div>
+                </div>
+                <div class="message"></div>
+                <a href="#" onclick="return false" data-clicked="" class="more"></a>
+            </div>
+
+            <div class="right">
+                <button id="close-btn">Close ticket</button>
+            </div>
+        </div>
+         
+    </template>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
